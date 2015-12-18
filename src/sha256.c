@@ -47,7 +47,9 @@ check_sha256(void)
 int
 main(void)
 {
-    sodium_init();
+    if (sodium_init() != 0) {
+        return 1;
+    }
     check_sha256();
 
     return 0;

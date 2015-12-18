@@ -67,7 +67,9 @@ check_blake2b(void)
 int
 main(void)
 {
-    sodium_init();
+    if (sodium_init() != 0) {
+        return 1;
+    }
     check_blake2b();
 
     return 0;
