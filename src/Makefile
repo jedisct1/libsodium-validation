@@ -1,6 +1,6 @@
 
 PROGS = blake2b blake2b-salt-personal sha256 sha512 \
-        x25519_base
+        x25519_base x25519_generic
 
 RM = rm -f
 
@@ -20,6 +20,9 @@ sha512: sha512.c common.c
 
 x25519_base: x25519_base.c common.c
 	$(CC) $(CFLAGS) -o x25519_base x25519_base.c common.c -lsodium
+
+x25519_generic: x25519_generic.c common.c
+	$(CC) $(CFLAGS) -o x25519_generic x25519_generic.c common.c -lsodium
 
 clean:
 	$(RM) $(PROGS)
