@@ -27,6 +27,7 @@
 
 src/blake2b
 src/blake2b-salt-personal
+src/ed25519
 src/sha256
 src/sha512
 src/x25519_base
